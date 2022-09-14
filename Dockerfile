@@ -26,6 +26,8 @@ MAINTAINER tnnmuhandiram
 
 VOLUME /tmp
 
+USER 10014
+
 # Add Spring Boot app.jar to Container
 COPY --from=0 "/byoc-java-springboot/target/byoc-*-SNAPSHOT.jar" app.jar
 
