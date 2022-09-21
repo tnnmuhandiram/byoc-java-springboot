@@ -1,13 +1,7 @@
-# FROM openjdk:11
-# MAINTAINER tharindumu@wso2.com
-# COPY target/byoc-0.0.1-SNAPSHOT.jar target/byoc-0.0.1-SNAPSHOT.jar
-# ENTRYPOINT ["java","-jar","target/byoc-0.0.1-SNAPSHOT.jar"]
-
-
 # Docker multi-stage build
 
 # 1. Building the App with Maven
-FROM maven:3-jdk-11
+FROM maven:3.8.6-openjdk-18
 
 ADD . /byoc-java-springboot
 WORKDIR /byoc-java-springboot
@@ -20,7 +14,7 @@ RUN mvn clean install
 
 
 # 2. Just using the build artifact and then removing the build-container
-FROM openjdk:11-jdk
+FROM openjdk:18-jdk
 
 MAINTAINER tnnmuhandiram
 
