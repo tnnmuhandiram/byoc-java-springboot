@@ -14,7 +14,7 @@ RUN mvn clean install
 
 
 # 2. Just using the build artifact and then removing the build-container
-FROM openjdk:18-jdk
+FROM openjdk:20-jdk-slim-buster
 
 MAINTAINER tnnmuhandiram
 
