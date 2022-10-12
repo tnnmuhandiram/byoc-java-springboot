@@ -1,7 +1,7 @@
 # Docker multi-stage build
 
 # 1. Building the App with Maven
-FROM maven:3.8.6-openjdk-18
+FROM maven:3.8.5-openjdk-18-slim
 
 ADD . /byoc-java-springboot
 WORKDIR /byoc-java-springboot
@@ -14,7 +14,7 @@ RUN mvn clean install
 
 
 # 2. Just using the build artifact and then removing the build-container
-FROM openjdk:18-jdk
+FROM openjdk:18-alpine
 
 MAINTAINER tnnmuhandiram
 
