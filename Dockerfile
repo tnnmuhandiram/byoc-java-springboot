@@ -1,7 +1,7 @@
 # Docker multi-stage build
 
 # 1. Building the App with Maven
-FROM maven:3.8.5-openjdk-18-slim
+FROM maven:3.6.0-jdk-13-alpine
 
 ADD . /byoc-java-springboot
 WORKDIR /byoc-java-springboot
