@@ -1,7 +1,7 @@
 # Docker multi-stage build
 
 # 1. Building the App with Maven
-FROM maven:3.6.0-jdk-13-alpine
+FROM maven:3.8.6-eclipse-temurin-8-alpine
 
 ADD . /byoc-java-springboot
 WORKDIR /byoc-java-springboot
@@ -17,7 +17,9 @@ RUN mvn clean install
 # FROM openjdk:18-alpine
 FROM eclipse-temurin:18-jdk-alpine
 
-RUN apt install zlib-1.2.13
+RUN apt install zlib
+
+RUN  apt show zlib   
 
 MAINTAINER tnnmuhandiram
 
