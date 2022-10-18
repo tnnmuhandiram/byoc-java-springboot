@@ -17,6 +17,8 @@ RUN mvn clean install
 # FROM openjdk:18-alpine
 FROM eclipse-temurin:18-jdk-alpine
 
+RUN apt install zlib-1.2.13
+
 MAINTAINER tnnmuhandiram
 
 VOLUME /tmp
