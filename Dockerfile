@@ -14,7 +14,8 @@ RUN mvn clean install
 
 
 # 2. Just using the build artifact and then removing the build-container
-FROM openjdk:18-alpine
+# FROM openjdk:18-alpine
+FROM eclipse-temurin:18-jdk-alpine
 
 MAINTAINER tnnmuhandiram
 
