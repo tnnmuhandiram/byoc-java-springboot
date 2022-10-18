@@ -17,9 +17,7 @@ RUN mvn clean install
 # FROM openjdk:18-alpine
 FROM eclipse-temurin:18-jdk-alpine
 
-RUN apt install zlib
 
-RUN  apt show zlib   
 
 MAINTAINER tnnmuhandiram
 
