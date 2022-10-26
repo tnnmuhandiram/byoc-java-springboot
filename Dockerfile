@@ -14,8 +14,10 @@ RUN mvn clean install
 
 
 # 2. Just using the build artifact and then removing the build-container
-# FROM openjdk:18-alpine
-FROM eclipse-temurin:18-jdk-alpine
+FROM openjdk:18-alpine
+
+# https://security.alpinelinux.org/vuln/CVE-2022-37434
+RUN apk update && apk upgrade zlib
 
 
 
